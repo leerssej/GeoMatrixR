@@ -1,0 +1,16 @@
+Title: GeoMatrixR
+Description: 
+  * create geo-ovoid distance matrix
+  * select locationID's that fall within threshold
+  * concatenate a name-list of the cluster grouping
+URL: https://github.com/leerssej/GeoMatrixR
+BugReports: https://github.com/leerssej/GeoMatrixR/issues
+Depends:
+    R (>= 3.1.0)
+    magrittr
+    tidyverse
+    geosphere
+    
+Authors@R: person("Jens", "Leerssen", email = "jens.leerssen@gmail.com", role = c("aut", "cre")leerssej
+Date: Updated 21 Nov 2016
+License: GPL-3
