@@ -11,8 +11,8 @@ library(tidyverse)
 library(geosphere)
 
 ######### GeoMatrixWithLanderModule_10 #geomatrix already added
-# Original Author: lamberp6 [Peter Lambert] (& Jian Dai)
-# leerssej adjusted the geocode data to be compatible and wired Peter's code up to it.
+# Original author of close_sites function: lamberp6 [Peter Lambert] (& Jian Dai)
+# leerssej adjusted the geocode data to be compatible, wired Peter's code up to it. Thank you Peter & Jian!
 load("RctComplt_v8gcPrecise")
 dat <- RctComplt_v8gcPrecise
 names(dat)
@@ -42,7 +42,7 @@ close_sites <- function(id, thresh) {
 }
 
 # Apply that function
-dat$close_sites <- sapply(dat$ADDR_ID, close_sites, 1)
+dat$close_sites <- sapply(dat$ADDR_ID, close_sites, thresh = 325)
 
 # order by cluster
 dat <- dat[order(dat$close_sites), ]
